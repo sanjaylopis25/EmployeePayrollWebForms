@@ -1,0 +1,90 @@
+﻿.center {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    border-color: white;
+    margin-left: 350px;
+    margin-right: 500px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: white;
+    width: 500px;
+}
+
+    .center h3 {
+        text-decoration-style: wavy;
+        text-align: center;
+    }
+
+form .text_field {
+    text-align: center;
+}
+
+form .box1 {
+    text-align: center;
+}
+
+form .box2 {
+    text-align: center;
+}
+
+form .select {
+    margin-left: 55px;
+    cursor:pointer;
+}
+form .cpassword {
+    text-align: center;
+}
+form .number {
+    text-align: center;
+}
+form .linksignin {
+    text-align: center;
+}
+
+
+form .btn-1 {
+    margin-left: 20%;
+    width: 60%;
+    height: 35px;
+    border: 1px;
+    background-color: Highlight;
+    border-radius: 20px;
+    font-size: 15px;
+    color: whitesmoke;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+form .btn-2 {
+    margin-left: 20%;
+    width: 60%;
+    height: 35px;
+    border: 1px;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    font-size: 15px;
+    color: blue;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+    form .btn-2:hover {
+        box-shadow: inset 350px 0 0 0 lightgrey;
+        color:black;
+    }
+
+/*form #Button1 {
+    margin-left: 20%;
+    width: 60%;
+    height: 35px;
+    border: 1px;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    font-size: 15px;
+    color: blue;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}*/
