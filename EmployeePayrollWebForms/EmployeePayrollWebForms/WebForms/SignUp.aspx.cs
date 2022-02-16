@@ -21,22 +21,6 @@ namespace EmployeePayrollWebForms
 
         protected void CheckBox1_CheckedChanged1(object sender, EventArgs e)
         {
-            string passwordText = null, confirmPassText = null;
-            if (CheckBox1.Checked)
-            {
-                TextBox4.TextMode = TextBoxMode.SingleLine;
-                passwordText = TextBox4.Text;
-                TextBox5.TextMode = TextBoxMode.SingleLine;
-                confirmPassText = TextBox5.Text;
-            }
-            else
-            {
-
-                TextBox4.TextMode = TextBoxMode.Password;
-                TextBox4.Text = passwordText;
-                TextBox5.TextMode = TextBoxMode.Password;
-                TextBox5.Text = confirmPassText;
-            }
         }
     }
 }

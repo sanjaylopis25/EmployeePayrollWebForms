@@ -3,12 +3,10 @@
     <link href="../StyleSheets/SignUp.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="center">
-        <form method="post">
-            <h3>Create An Account</h3>
-        
+    <div class="center">   
         <div class="text_field">
-            <p>to Continue To Employee Payroll</p>
+            <h3 style="margin-left:70px">Create An Account</h3>
+            <p style="margin-left:75px">to Continue To Employee Payroll</p>
         <div />
             <br />
          <div>
@@ -29,25 +27,18 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="TextBox3" Font-Size="X-Small" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email Entered" ControlToValidate="TextBox3" Font-Size="X-Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </div>
-        <div class="cpassword">
+        <div>
             <asp:TextBox ID="TextBox4" runat="server" type="password" name="Password" placeholder="Enter Password"></asp:TextBox>
             <asp:TextBox ID="TextBox5" runat="server" type="password" name="Password" placeholder="Confirm Password"></asp:TextBox>   
-            </div>  
             
-            <div class="comparevalidator1">
-                <asp:CheckBox ID="CheckBox1" class="checkbox1" runat="server" text="Show Password" OnCheckedChanged="CheckBox1_CheckedChanged1" AutoPostBack="true" />
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox4" ControlToValidate="TextBox5" ErrorMessage="Passwords Does not Match " Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
-            </div>
-        <br />
-        <!--<div class="select">
-                <select>
-                    <option disabled selected>Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Others">Others</option>
-                </select> 
-        </div>
-        <br />--> 
+           </div>
+            <div>
+        <asp:CheckBox ID="CheckBox2" runat="server" Text="Show Password"  />
+    </div>            
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox4" ControlToValidate="TextBox5" ErrorMessage="Passwords doesn't match" Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox4" ErrorMessage="Password Required" Font-Size="X-Small" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBox5" ErrorMessage="Password Required" Font-Size="X-Small" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br />        
         <div class="number">
             <asp:TextBox ID="TextBox6" runat="server" name="Phone Number" placeholder="Phone Number" style="width: 380px" ></asp:TextBox>
         </div>
@@ -62,8 +53,6 @@
         <%--<div>
             <!--<button  class="btn-2">Sign In</button>-->
             <asp:Button ID="Button1" class="btn-2" runat="server" Text="Sign In" OnClick="Button1_Click" />
-    </div>--%>
-        </form>  
-    
-    </div>    
+    </div>--%> 
+      </div>  
 </asp:Content>

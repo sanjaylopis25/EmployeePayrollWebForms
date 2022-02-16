@@ -11,7 +11,8 @@ namespace EmployeePayrollWebForms.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+                     
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -22,6 +23,11 @@ namespace EmployeePayrollWebForms.WebForms
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("SignUp.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+  
         }
     }
 }
