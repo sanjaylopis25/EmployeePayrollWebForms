@@ -47,8 +47,12 @@
         <!--<button  class="btn-1">Register</button>-->
             <asp:Button ID="Button1" class="btn-2" runat="server" Text="Sign In" OnClick="Button1_Click" />
             
-            <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="Register"/>
+            <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="Register" OnClick="Button2_Click"/>
     </div>
+            <div style="color:blue">
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+            </div>
+            
     </div>
         <%--<div>
             <!--<button  class="btn-2">Sign In</button>-->
