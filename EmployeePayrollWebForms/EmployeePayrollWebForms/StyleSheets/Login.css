@@ -1,24 +1,16 @@
-﻿#Content2 {
-    margin: 0;
-    padding: 0;
-    font-family: montserrat;
-    background: linear-gradient(120deg,#ffd800, #4cff00);
-    height: 4000px;
-    overflow: hidden;
-}
-
+﻿
 .center {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid;
     border-radius: 10px;
-    border-color: white;
-    margin-left: 400px;
-    margin-right: 500px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    border-color: silver;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 60px;
+    margin-bottom: 60px;
     background-color: white;
-    width: 300px;
+    width: 30%;
 }
 
 .center h2 {
@@ -36,7 +28,7 @@ form .box2 {
     text-align: center;
 }
 form .check_box {
-    margin-left:55px;
+    margin-left:80px;
 }
 form .btn-4 {
     margin-left: 5%;
@@ -53,7 +45,7 @@ form .btn-4 {
 }
 form .btn-3 {
     margin-left: 5%;
-    width: 40%;
+    width: 30%;
     height: 35px;
     border: 1px;
     background-color: ghostwhite;

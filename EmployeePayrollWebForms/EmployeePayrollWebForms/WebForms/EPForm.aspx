@@ -5,37 +5,53 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="center">
     <div class="Header">
-    <h3> Employee Payroll Form </h3>
+    <h3 style="color:#42515F"> Employee Payroll Form </h3>
     </div> 
         <br />
         <div class="name">
-            <asp:Label ID="Label3" runat="server" Text="Name"></asp:Label>&emsp;&emsp;&emsp;&ensp;
+            <asp:Label ID="Label3" runat="server" Text="Name"></asp:Label>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <asp:TextBox ID="TextBox2" runat="server" Width="550px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+             
         </div>
         <br />
         <div>
-             <asp:Label ID="Label1" runat="server" Text="Profile Image"></asp:Label>
-             <asp:RadioButtonList ID="RadioButtonList2" runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal">
-                 <asp:ListItem>&nbsp;&nbsp;&nbsp;&nbsp<img src="../Assets/profile-images/Female (3).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&nbsp;&nbsp;&nbsp;&nbsp<img src="../Assets/profile-images/Male (1).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&nbsp;&nbsp;&nbsp;&nbsp<img src="../Assets/profile-images/Female (2).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&nbsp;&nbsp;&nbsp;&nbsp<img src="../Assets/profile-images/Male (4).png" alt="avatar" class="avatar" /></asp:ListItem>
+             <asp:Label ID="Label1" runat="server" Text="Profile Image"></asp:Label>&emsp;&emsp;&emsp;
+            <style>                .rbl1 label {
+                    width: 100px
+                }
+            </style>
+             <asp:RadioButtonList ID="RadioButtonList2" CssClass="rbl1" runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Female (3).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Male (1).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Female (2).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Male (4).png" alt="avatar" class="avatar" /></asp:ListItem>
              </asp:RadioButtonList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="RadioButtonList2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>            
-        
+        <br />
         <div>
             <asp:Label ID="Label2" runat="server" Text="Gender"></asp:Label>
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server" Width="175px">
+            &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <style>                .rbl2 label {
+                    width: 100px
+                }
+            </style>
+            <asp:RadioButtonList ID="RadioButtonList1" CssClass="rbl2" runat="server" Width="300px" CellPadding="1" CellSpacing="2" RepeatDirection="Horizontal" RepeatLayout="Flow">
             <asp:ListItem>Male</asp:ListItem><asp:ListItem>Female</asp:ListItem>
             </asp:RadioButtonList>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="RadioButtonList1" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
          </div>
-        
+        <br />
         <div>
             <label>Department&nbsp</label>
-            <asp:CheckBoxList ID="CheckBoxList1" runat="server" CellPadding="1" CellSpacing="4" Height="60px" RepeatDirection="Horizontal" Width="512px">
+            &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <style>                .rbl3 label {
+                    width: 80px
+                }
+            </style>
+            <asp:CheckBoxList ID="CheckBoxList1" CssClass="rbl3" runat="server" CellPadding="1" CellSpacing="4" Height="60px" RepeatDirection="Horizontal" Width="512px" RepeatLayout="Flow">
                 <asp:ListItem Text="&ensp;HR&emsp;" Value="1"> </asp:ListItem>
                 <asp:ListItem Text="&ensp;Sales" Value="2"></asp:ListItem>
                 <asp:ListItem Text="&ensp;Finance" Value="3"></asp:ListItem>
@@ -43,9 +59,9 @@
                 <asp:ListItem  Text="&ensp;Others" Value="5"></asp:ListItem>
             </asp:CheckBoxList>
         </div>
-        <br />
         <div>
             <label>Salary&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="DropDownList1" runat="server" Width="358px" Height="30px">
                 <asp:ListItem>Select Salary</asp:ListItem>
                 <asp:ListItem>0-2.5Lac</asp:ListItem>
@@ -58,6 +74,7 @@
         <br />
         <div>
             <label>Start Date&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="DropDownList2" runat="server" Width="60px">  
                 <asp:ListItem>Day</asp:ListItem>            
                 <asp:ListItem>01</asp:ListItem>
@@ -128,15 +145,15 @@
         </div>
         <br />
         <div >
-            <label>Notes&nbsp;&nbsp;&nbsp;&nbsp</label>        
+            <label>Notes&nbsp;&nbsp;&nbsp;&nbsp</label> 
+            &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox1" runat="server" width="550px" Height="70px"></asp:TextBox>
         </div>
         <br />
         <div class="buttonsbottom">
-            <asp:Button ID="Button1" runat="server" class="btn btn-secondary" Text="Cancel" Width="150px" Height="40px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" class="btn btn-primary" Text="Submit" Width="150px" Height="40px" />&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button3" runat="server" class="btn btn-secondary" Text="Reset" Width="150px" Height="40px" />
+            <asp:Button ID="Button1" runat="server" class="btn btn-secondary" Text="Cancel" Width="150px" Height="50px" />            
+            <asp:Button ID="Button2" runat="server" class="btn btn-primary" Text="Submit" Width="150px" Height="50px" />
+            <asp:Button ID="Button3" runat="server" class="btn btn-secondary" Text="Reset" Width="150px" Height="50px" />
             <%--<asp:Button ID="Button1" runat="server" Text="Button" />
             <asp:Button ID="Button2" runat="server" Text="Button" />--%>
 

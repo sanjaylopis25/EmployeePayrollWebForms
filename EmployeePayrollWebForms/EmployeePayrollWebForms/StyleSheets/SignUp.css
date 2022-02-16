@@ -1,15 +1,15 @@
 ﻿.center {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid silver;
     border-radius: 10px;
-    border-color: white;
-    margin-left: 350px;
-    margin-right: 500px;
+    border-color: silver;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 60px;
     margin-bottom: 60px;
     background-color: white;
-    width: 500px;
+    width: 40%;
 }
 
     .center h3 {
@@ -23,6 +23,8 @@ form .text_field {
 
 form .box1 {
     text-align: center;
+    margin-left: 15px;
+    
 }
 
 form .box2 {
@@ -42,7 +44,12 @@ form .number {
 form .linksignin {
     text-align: center;
 }
-
+form .checkbox1 {
+    
+    margin-left: -20px;
+}
+    text-align: center;
+}
 /*form .btn-1 {
     margin-left: 20%;
     width: 60%;
@@ -56,7 +63,7 @@ form .linksignin {
     outline: none;
 }*/
 form .btn-2 {
-    margin-left:10%;
+    margin-left:80px;
     width: 20%;
     height: 35px;
     border: 1px;
@@ -88,4 +95,8 @@ form .btn-2 {
 }*/
 .Valid1 {
     text-align: center;
+}
+.btn-primary{
+    float:right;
+    margin-right:85px;
 }

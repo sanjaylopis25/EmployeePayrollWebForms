@@ -14,7 +14,7 @@
      </div>
      <br />
     <div class="box1">
-        <asp:TextBox ID="TextBox1" runat="server" name="Email" placeholder="Email"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" name="Email" placeholder="Email" Width="200px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Red" Font-Size="Small">*</asp:RequiredFieldValidator>
         <%--<input id="Text1" type="text" name="Email" placeholder="Email" />--%>
     </div>
@@ -22,11 +22,12 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Invalid Email" Font-Size="X-Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
      <br /> 
      <div class="box2"> 
-         <asp:TextBox ID="TextBox2" runat="server" name="Password" placeholder="Password"></asp:TextBox>
+         <asp:TextBox ID="TextBox2" runat="server" name="Password" placeholder="Password" Width="200px"></asp:TextBox>
         <%--<input id="Text2" type="Password" name="Password" placeholder="Password" />--%>
          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter Password" ForeColor="Red" Font-Size="Small">*</asp:RequiredFieldValidator>
     </div>
     <div class="check_box">
+        <asp:LinkButton ID="LinkButton1" runat="server">Forgot Password</asp:LinkButton><br>
         <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" AutoPostBack="True" OnCheckedChanged="CheckBox1_CheckedChanged" />
     </div>
     <br />
