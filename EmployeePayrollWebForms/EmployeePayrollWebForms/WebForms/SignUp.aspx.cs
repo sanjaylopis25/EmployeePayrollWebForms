@@ -25,6 +25,7 @@ namespace EmployeePayrollWebForms
 
         protected void CheckBox1_CheckedChanged1(object sender, EventArgs e)
         {
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -42,10 +43,24 @@ namespace EmployeePayrollWebForms
                 cmd.Parameters.Add("@phno", System.Data.SqlDbType.VarChar).Value = TextBox6.Text.Trim();
                 cmd.Connection = con;
                 con.Open();
-                cmd.ExecuteNonQuery();
+                int i =cmd.ExecuteNonQuery();
+                if(i!=0)
                 Label1.Text = "Registered Successfully!!";
+                con.Close();
             }
  
+        }
+
+        protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        { 
+            if (CheckBox2.Checked)
+            {
+                TextBox4.TextMode= TextBoxMode.SingleLine;
+            }
+            else
+            {
+                TextBox4.TextMode = TextBoxMode.Password;
+            }
         }
     }
 }

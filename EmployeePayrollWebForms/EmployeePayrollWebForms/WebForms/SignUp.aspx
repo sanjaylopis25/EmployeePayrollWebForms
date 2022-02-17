@@ -28,12 +28,12 @@
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email Entered" ControlToValidate="TextBox3" Font-Size="X-Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </div>
         <div>
-            <asp:TextBox ID="TextBox4" runat="server" type="password" name="Password" placeholder="Enter Password"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" name="Password" placeholder="Enter Password" TextMode="Password"></asp:TextBox>
             <asp:TextBox ID="TextBox5" runat="server" type="password" name="Password" placeholder="Confirm Password"></asp:TextBox>   
             
            </div>
             <div>
-        <asp:CheckBox ID="CheckBox2" runat="server" Text="Show Password"  />
+        <asp:CheckBox ID="CheckBox2" runat="server" Text="Show Password" OnCheckedChanged="CheckBox2_CheckedChanged"  />
     </div>            
             <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox4" ControlToValidate="TextBox5" ErrorMessage="Passwords doesn't match" Font-Size="X-Small" ForeColor="Red"></asp:CompareValidator>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox4" ErrorMessage="Password Required" Font-Size="X-Small" ForeColor="Red"></asp:RequiredFieldValidator>
