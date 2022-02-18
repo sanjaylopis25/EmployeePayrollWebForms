@@ -31,3 +31,14 @@ CREATE TABLE LoginUser (
     Password varchar(50),
 	LoginTime datetime default sysdatetime()
 );
+CREATE TABLE Form (
+    Emp_id int identity(1,1) primary key not null,
+	Name varchar(50),
+    Profile_Image varchar(50),    
+    Gender varchar(50),
+    Department varchar(50),
+	Salary varchar(50),
+	Start_Date Date,
+	Notes varchar(250),
+	RegisteredDate datetime default sysdatetime()
+);

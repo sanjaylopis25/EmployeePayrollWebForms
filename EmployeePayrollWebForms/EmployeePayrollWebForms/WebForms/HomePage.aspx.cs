@@ -11,8 +11,8 @@ namespace EmployeePayrollWebForms.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource = datareader;
-            GridView1.DataBind();
+            GridView2.DataSource = Session["user"];
+            GridView2.DataBind();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

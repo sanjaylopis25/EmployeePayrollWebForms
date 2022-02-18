@@ -41,13 +41,11 @@ namespace EmployeePayrollWebForms.WebForms
             if (datareader != null)
             {
                 Session["user"] = datareader;
-                Response.Redirect("HomePage.aspx");
-                GridView1.DataSource = datareader;
-                GridView1.DataBind();
+                Response.Redirect("HomePage.aspx");                
             }
             else
             {
-
+                Label1.Text = "Wrong Email or Password";
             }
             con.Close();
             //using (SqlConnection con = new SqlConnection(constring))
