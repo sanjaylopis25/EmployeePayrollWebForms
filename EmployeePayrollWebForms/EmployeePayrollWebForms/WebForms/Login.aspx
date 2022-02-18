@@ -37,11 +37,10 @@
         
     </div>
         <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+
+        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
     <%--<div>
-        
             <!--<a href="SignUp.aspx">Create an Account</a>-->  
-            
-     
      </div>--%>
     </form>
      

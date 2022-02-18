@@ -1,20 +1,33 @@
 create database EPWebforms;
-CREATE TABLE Register (
-    Id int Identity (1,1) primary key,
+CREATE TABLE Users (
     First_Name varchar(50),
     Last_Name varchar(50),    
     Email_Id varchar(50),
     Password varchar(50),
-	Cpassword varchar(50),
-	Phone_Number bigint
+	Phone_Number bigint,
+	RegisteredDate datetime default sysdatetime()
 );
 
-ALTER TABLE Register
+ALTER TABLE Users
 DROP COLUMN Phone_Number;
 
-select * from Register
+select * from Users
 
-ALTER TABLE Register
-ADD Phone_Number varchar(50);
+ALTER TABLE Users
+ALTER column RegisteredDate datetime default sysdatetime null;
 
-drop table Register;
+drop table Users;
+
+
+CREATE TABLE LoginUser ( 
+    id int identity(1,1) primary key not null,
+	Email_Id varchar(50),
+    Password varchar(50),
+	LoginTime datetime default sysdatetime()
+);
+CREATE TABLE LoginUser ( 
+    id int identity(1,1) primary key not null,
+	Email_Id varchar(50),
+    Password varchar(50),
+	LoginTime datetime default sysdatetime()
+);

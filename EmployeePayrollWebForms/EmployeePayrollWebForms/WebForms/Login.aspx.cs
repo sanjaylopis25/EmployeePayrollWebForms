@@ -6,12 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace EmployeePayrollWebForms.WebForms
 {
     public partial class Login : System.Web.UI.Page
     {
-        string constring = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+        static string str = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection(str);
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,21 +32,40 @@ namespace EmployeePayrollWebForms.WebForms
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(constring))
+            SqlCommand com = new SqlCommand("sp_Login", con);
+            com.CommandType = CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@Email_Id", TextBox1.Text);
+            com.Parameters.AddWithValue("@Password", TextBox2.Text);
+            con.Open();
+            var datareader = com.ExecuteReader();
+            if (datareader != null)
             {
-                con.Open();
-                string querry = "select * from Register where Email_Id='" + TextBox1.Text + "' and Password='" + TextBox2.Text + "' ";
-                SqlCommand cmd = new SqlCommand(querry, con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    Response.Redirect("EPForm.aspx");
-                }
-                else
-                {
-                    Label1.Text = "Login Failed!! Use correct Email Id and Password";
-                }
+                Session["user"] = datareader;
+                Response.Redirect("HomePage.aspx");
+                GridView1.DataSource = datareader;
+                GridView1.DataBind();
             }
+            else
+            {
+
+            }
+            con.Close();
+            //using (SqlConnection con = new SqlConnection(constring))
+            //{
+            //    con.Open();
+            //    string querry = "select * from Register where Email_Id='" + TextBox1.Text + "' and Password='" + TextBox2.Text + "' ";
+            //    SqlCommand cmd = new SqlCommand(querry, con);
+            //    SqlDataReader dr = cmd.ExecuteReader();
+            //    if (dr.Read())
+            //    {
+            //        Response.Redirect("EPForm.aspx");
+            //    }
+            //    else
+            //    {
+            //        Label1.Text = "Login Failed!! Use correct Email Id and Password";
+            //    }
+            //    con.Close();
+            //}
         }
     }
 }
