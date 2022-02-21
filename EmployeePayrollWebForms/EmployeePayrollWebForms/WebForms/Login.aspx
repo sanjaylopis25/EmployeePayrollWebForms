@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="center">
-        <h2>Sign In </h2>
+        <h2 class="titlehead">Sign In </h2>
     <form method="post">
         <div class="text_field">
             
@@ -14,15 +14,14 @@
      </div>
      <br />
     <div class="box1">
-        <asp:TextBox ID="TextBox1" runat="server" name="Email" placeholder="Email" Width="200px"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" name="Email" placeholder="Email" Width="260px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Red" Font-Size="Small">*</asp:RequiredFieldValidator>
         <%--<input id="Text1" type="text" name="Email" placeholder="Email" />--%>
     </div>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Invalid Email" Font-Size="X-Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" CssClass="Valid1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Invalid Email" Font-Size="X-Small" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
      <br /> 
      <div class="box2"> 
-         <asp:TextBox ID="TextBox2" runat="server" name="Password" placeholder="Password" Width="200px"></asp:TextBox>
+         <asp:TextBox ID="TextBox2" runat="server" name="Password" placeholder="Password" Width="260px"></asp:TextBox>
         <%--<input id="Text2" type="Password" name="Password" placeholder="Password" />--%>
          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Enter Password" ForeColor="Red" Font-Size="Small">*</asp:RequiredFieldValidator>
     </div>

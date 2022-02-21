@@ -1,5 +1,5 @@
 ﻿
-.center {
+/*.center {
     padding-top: 50px;
     padding-bottom: 50px;
     border: 1px solid;
@@ -11,29 +11,40 @@
     margin-bottom: 60px;
     background-color: white;
     width: 30%;
+}*/
+.center {
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    border-color: silver;
+    margin-left:400px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: white;
+    width: 350px;
 }
-
-.center h2 {
-    text-decoration-style:wavy;
-    text-align:center;
+.titlehead {
+    text-decoration-style: wavy;
+    text-align: center;
 }
-
 form .text_field {
     text-align: center;
 }
-form .box1 {
+.box1 {
     text-align: center;
 }
-form .box2 {
+.box2 {
     text-align: center;
 }
-form .check_box {
-    margin-left:80px;
+.check_box{
+    margin-left:40px;
 }
-form .btn-4 {
-    margin-left: 5%;
-    width: 40%;
-    height: 35px;
+.btn-4 {   
+    width: 90px;
+    height: 40px;
+    margin-left:50px;
     border: 1px;
     background-color: Highlight;
     border-radius: 5px;
@@ -43,9 +54,9 @@ form .btn-4 {
     cursor: pointer;
     outline: none;
 }
-form .btn-3 {
-    margin-left: 5%;
-    width: 30%;
+.btn-3 {
+    margin-left:35px;
+    width: 120px;
     height: 35px;
     border: 1px;
     background-color: ghostwhite;
@@ -56,5 +67,30 @@ form .btn-3 {
     cursor: pointer;
     outline: none;
 }
+/*
 
 
+form .box1 {
+    text-align: center;
+}
+form 
+form .check_box {
+    margin-left:80px;
+}
+form .btn-4 {
+    margin-left: 5%;
+    width: 30%;
+    height: 35px;
+    border: 1px;
+    background-color: Highlight;
+    border-radius: 5px;
+    font-size: 15px;
+    color: whitesmoke;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+form */
+.Valid1 {
+    margin-left: 50px;
+}

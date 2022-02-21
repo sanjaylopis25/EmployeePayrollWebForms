@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,14 +29,14 @@ namespace EmployeePayrollWebForms.WebForms
             }
             //string gender = string.Empty;
             //if (RadioButtonList1.)
-            //{
+            //{'
 
             //}
             SqlConnection con = new SqlConnection(constring);
             SqlCommand cmd = new SqlCommand("sp_Form", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Name", System.Data.SqlDbType.VarChar).Value = TextBox2.Text.Trim();
-            //cmd.Parameters.AddWithValue("@Profile_Image", RadioButtonList2.SelectedItem.Selected);
+            cmd.Parameters.AddWithValue("@Profile_Image", RadioButtonList2.SelectedItem.Value);
             cmd.Parameters.AddWithValue("@Gender", RadioButtonList1.SelectedItem.Text);
             cmd.Parameters.AddWithValue("@Department", CheckBoxList1.SelectedItem.Text);
             cmd.Parameters.AddWithValue("@Salary", DropDownList1.SelectedItem.Text);

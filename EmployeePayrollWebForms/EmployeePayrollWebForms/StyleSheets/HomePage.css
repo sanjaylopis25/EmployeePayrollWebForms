@@ -1,9 +1,6 @@
-﻿.Gridview1 {
-    align-items:center;
-    text-align:center;
-}
-.btn-btn1 {
-    float: right;
+﻿
+/*.btn-btn1 {
+    float: left;
     background-color: #82A70C;
     margin-top:30px;
     margin-right: 100px;
@@ -11,8 +8,22 @@
     border-radius: 5px;
     font-weight: 400;
     cursor: pointer;
-}
-    .btn-btn1:hover {
+}*/
+    /*.btn-btn1:hover {
         box-shadow: inset 350px 0 0 0 lightgrey;
         color: black;
-    }
+    }*/
+.btn-btn1 {
+    
+    background-color: #82A70C;
+    margin-top: 30px;
+    margin-left: 950px;
+    margin-bottom:30px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Gridview1{
+    text-align:center;
+}

@@ -43,7 +43,7 @@ end catch
 
 ALTER PROCEDURE sp_Form
 @Name varchar(50),
---@Profile_Image varbinary(max),
+@Profile_Image varchar(50),
 @Gender varchar(50),
 @Department varchar(50),
 @Salary varchar (50),
@@ -51,9 +51,9 @@ ALTER PROCEDURE sp_Form
 @Notes varchar(50)
 AS
 BEGIN
-insert into Form (Name,/*Profile_Image,*/Gender,Department,Salary,Start_Date,Notes) values
+insert into Form (Name,Profile_Image,Gender,Department,Salary,Start_Date,Notes) values
 (
-@Name,/*@Profile_Image,*/@Gender,@Department,@Salary,@Start_Date,@Notes
+@Name,@Profile_Image,@Gender,@Department,@Salary,@Start_Date,@Notes
 )
 END
 GO

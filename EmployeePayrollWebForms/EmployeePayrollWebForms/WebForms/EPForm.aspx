@@ -16,20 +16,20 @@
              
         </div>
         <br />
-        <%--<div>
+        <div>
              <asp:Label ID="Label1" runat="server" Text="Profile Image"></asp:Label>&emsp;&emsp;&emsp;
             <style>                .rbl1 label {
                     width: 100px
                 }
             </style>
              <asp:RadioButtonList ID="RadioButtonList2" CssClass="rbl1" runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Female (3).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Male (1).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Female (2).png" alt="avatar" class="avatar" /></asp:ListItem>
-                 <asp:ListItem>&emsp;<img src="../Assets/profile-images/Male (4).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Female (3).png">&emsp;<img src="../Assets/profile-images/Female (3).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Male (1).png">&emsp;<img src="../Assets/profile-images/Male (1).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Female (2).png">&emsp;<img src="../Assets/profile-images/Female (2).png" alt="avatar" class="avatar" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Male (4).png">&emsp;<img src="../Assets/profile-images/Male (4).png" alt="avatar" class="avatar" /></asp:ListItem>
              </asp:RadioButtonList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="RadioButtonList2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-        </div>         --%>   
+        </div>            
         <br />
         <div>
             <asp:Label ID="Label2" runat="server" Text="Gender"></asp:Label>
