@@ -16,7 +16,7 @@
              
         </div>
         <br />
-        <div>
+        <%--<div>
              <asp:Label ID="Label1" runat="server" Text="Profile Image"></asp:Label>&emsp;&emsp;&emsp;
             <style>                .rbl1 label {
                     width: 100px
@@ -29,7 +29,7 @@
                  <asp:ListItem>&emsp;<img src="../Assets/profile-images/Male (4).png" alt="avatar" class="avatar" /></asp:ListItem>
              </asp:RadioButtonList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="RadioButtonList2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-        </div>            
+        </div>         --%>   
         <br />
         <div>
             <asp:Label ID="Label2" runat="server" Text="Gender"></asp:Label>
@@ -151,9 +151,9 @@
         </div>
         <br />
         <div class="buttonsbottom">
-            <asp:Button ID="Button1" runat="server" class="btn btn-secondary" Text="Cancel" Width="150px" Height="50px" />            
-            <asp:Button ID="Button2" runat="server" class="btn btn-primary" Text="Submit" Width="150px" Height="50px" />
-            <asp:Button ID="Button3" runat="server" class="btn btn-secondary" Text="Reset" Width="150px" Height="50px" />
+            <asp:Button ID="Button1" CausesValidation="false" runat="server" class="btn btn-secondary" Text="Cancel" Width="150px" Height="50px" OnClick="Button1_Click" />            
+            <asp:Button ID="Button2" runat="server" class="btn btn-primary" Text="Submit" Width="150px" Height="50px" OnClick="Button2_Click" />
+            <asp:Button ID="Button3" CausesValidation="false" runat="server" class="btn btn-secondary" Text="Reset" Width="150px" Height="50px" OnClick="Button3_Click" />
             <%--<asp:Button ID="Button1" runat="server" Text="Button" />
             <asp:Button ID="Button2" runat="server" Text="Button" />--%>
 

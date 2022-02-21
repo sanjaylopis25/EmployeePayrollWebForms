@@ -45,7 +45,7 @@
         <br />
         <div class="btnregister">
         <!--<button  class="btn-1">Register</button>-->
-            <asp:Button ID="Button1" class="btn-2" runat="server" Text="Sign In" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" class="btn-2" CausesValidation="false" runat="server" Text="Sign In" OnClick="Button1_Click" />
             
             <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="Register" OnClick="Button2_Click"/>
     </div>

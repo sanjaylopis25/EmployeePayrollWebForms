@@ -41,20 +41,19 @@ ERROR_MESSAGE() as ErrorMessage;
 end catch
 
 
-CREATE PROCEDURE sp_Form
-@Emp_id varchar(50),
+ALTER PROCEDURE sp_Form
 @Name varchar(50),
-@Profile_Image varchar (50),
+--@Profile_Image varbinary(max),
 @Gender varchar(50),
 @Department varchar(50),
 @Salary varchar (50),
-@Start_Date varchar(50),
+@Start_Date	 varchar(50),
 @Notes varchar(50)
 AS
 BEGIN
-insert into Form (Emp_id,Name,Profile_Image,Gender,Department,Salary,Start_Date,Notes) values
+insert into Form (Name,/*Profile_Image,*/Gender,Department,Salary,Start_Date,Notes) values
 (
-@Emp_id,@Name,@Profile_Image,@Gender,@Department,@Salary,@Start_Date,@Notes
+@Name,/*@Profile_Image,*/@Gender,@Department,@Salary,@Start_Date,@Notes
 )
 END
 GO

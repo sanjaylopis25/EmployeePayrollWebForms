@@ -137,6 +137,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="EmployeePayroll.Master" />
     <Content Include="StyleSheets\EPForm.css" />
+    <Content Include="StyleSheets\HomePage.css" />
     <Content Include="Usercontrol.ascx" />
     <Content Include="WebForms\EPForm.aspx" />
     <Content Include="WebForms\HomePage.aspx" />

@@ -32,7 +32,7 @@
     </div>
     <br />
     <div class="btnLogin">
-        <asp:Button ID="Button2" class="btn-3" runat="server" Text="Create Account" OnClick="Button2_Click" />
+        <asp:Button ID="Button2" class="btn-3" CausesValidation="false" runat="server" Text="Create Account" OnClick="Button2_Click" />
         <asp:Button ID="Button4" class="btn-4" runat="server" Text="Login" OnClick="Button4_Click" />
         
     </div>

@@ -34,7 +34,7 @@ CREATE TABLE LoginUser (
 CREATE TABLE Form (
     Emp_id int identity(1,1) primary key not null,
 	Name varchar(50),
-    Profile_Image varchar(50),    
+    Profile_Image varbinary(max),    
     Gender varchar(50),
     Department varchar(50),
 	Salary varchar(50),
@@ -42,3 +42,6 @@ CREATE TABLE Form (
 	Notes varchar(250),
 	RegisteredDate datetime default sysdatetime()
 );
+
+
+Select * from Form;
