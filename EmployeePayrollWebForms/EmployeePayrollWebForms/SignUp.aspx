@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EmployeePayroll.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="EmployeePayrollWebForms.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
     <link href="../StyleSheets/SignUp.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -50,7 +51,7 @@
             <asp:Button ID="Button2" class="btn btn-primary" runat="server" Text="Register" OnClick="Button2_Click"/>
     </div>
             <div style="color:blue">
-                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label1" runat="server" Font-Size="Small" ForeColor="Red"></asp:Label>
             </div>
             
     </div>

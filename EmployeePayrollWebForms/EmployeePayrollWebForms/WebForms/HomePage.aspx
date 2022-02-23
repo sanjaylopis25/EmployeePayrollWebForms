@@ -48,7 +48,7 @@
                     <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Assets/images/edit-icon-png-3607 (1) (1) (1).png" />
                 </ItemTemplate>
             </asp:TemplateField>--%>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Image" DeleteImageUrl="~/Assets/images/delete-button-png-28580 (1) (1).png" EditImageUrl="~/Assets/images/edit-icon-png-3607 (1) (1) (1).png" HeaderText="Actions" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Image" DeleteImageUrl="~/Assets/images/delete-button-png-28580 (1) (1).png" EditImageUrl="~/Assets/images/edit-icon-png-3607 (1) (1) (1).png" HeaderText="Actions" CancelImageUrl="~/Assets/images/red-x-icon-53 (1).png" UpdateImageUrl="~/Assets/images/1567159 (1).png" />
         </Columns>  
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

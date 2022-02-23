@@ -7,13 +7,30 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Web.Security;
 
 namespace EmployeePayrollWebForms.WebForms
 {
     public partial class Login : System.Web.UI.Page
     {
-        static string str = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
-        SqlConnection con = new SqlConnection(str);
+        
+
+        protected bool AuthenticateUser(string email_id, string password)
+        {
+            string str = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(str))
+            {
+                SqlCommand com = new SqlCommand("sp_Login", con);
+                com.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramEmail_Id = new SqlParameter("@email", email_id);
+                SqlParameter paramPassword = new SqlParameter("@pswrd", password);
+                com.Parameters.Add(paramEmail_Id);
+                com.Parameters.Add(paramPassword);
+                con.Open();
+                int ReturnCode = (int)com.ExecuteScalar();
+                return ReturnCode == 1;
+            }          
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -32,22 +49,15 @@ namespace EmployeePayrollWebForms.WebForms
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            SqlCommand com = new SqlCommand("sp_Login", con);
-            com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Email_Id", TextBox1.Text);
-            com.Parameters.AddWithValue("@Password", TextBox2.Text);
-            con.Open();
-            var datareader = com.ExecuteReader();
-            if (datareader != null)
+            if (AuthenticateUser(TextBox1.Text, TextBox2.Text))
             {
-                Session["user"] = datareader;
-                Response.Redirect("HomePage.aspx");                
+                FormsAuthentication.RedirectFromLoginPage(TextBox1.Text, CheckBox1.Checked);
             }
             else
             {
-                Label1.Text = "Wrong Email or Password";
+                Label1.Text = "Invalid Email Or Password";
             }
-            con.Close();
+            
             //using (SqlConnection con = new SqlConnection(constring))
             //{
             //    con.Open();
@@ -65,5 +75,6 @@ namespace EmployeePayrollWebForms.WebForms
             //    con.Close();
             //}
         }
+
     }
 }

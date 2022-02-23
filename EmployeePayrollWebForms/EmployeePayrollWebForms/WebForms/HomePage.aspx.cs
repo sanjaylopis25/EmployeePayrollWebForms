@@ -6,7 +6,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
+using System.Windows;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace EmployeePayrollWebForms.WebForms
 {
@@ -36,20 +38,31 @@ namespace EmployeePayrollWebForms.WebForms
         }
 
         protected void GridView3_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            int id = Convert.ToInt32(GridView3.DataKeys[e.RowIndex].Value.ToString());
-            using(SqlConnection con= new SqlConnection(constring))
+        {         
+                DialogResult dialogResult = MessageBox.Show("Do you want to delete?", "Remove Row", (MessageBoxButtons)MessageBoxButton.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("delete from Form where Emp_id='" + id + "'", con);
-                int t = cmd.ExecuteNonQuery();
-                if (t > 0)
+                int id = Convert.ToInt32(GridView3.DataKeys[e.RowIndex].Value.ToString());
+                using (SqlConnection con = new SqlConnection(constring))
                 {
-                    Response.Write("<script>alert('Data has Deleted')</script>");
-                    GridView3.EditIndex = -1;
-                    GridView3.DataBind();
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from Form where Emp_id='" + id + "'", con);
+                    int t = cmd.ExecuteNonQuery();
+
+                    if (t > 0)
+                    {
+                        Response.Write("<script>alert('Data has Deleted')</script>");
+                        GridView3.EditIndex = -1;
+                        GridView3.DataBind();
+                    }
                 }
             }
+            else
+            {
+                Response.Redirect("HomePage.aspx");
+            }
+            
         }
     }
 }  

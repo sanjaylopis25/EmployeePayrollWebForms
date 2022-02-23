@@ -42,12 +42,22 @@ namespace EmployeePayrollWebForms
                 cmd.Parameters.Add("@phno", System.Data.SqlDbType.VarChar).Value = TextBox6.Text.Trim();
                 cmd.Connection = con;
                 con.Open();
-                int i =cmd.ExecuteNonQuery();
-                if(i!=0)
-                Label1.Text = "Registered Successfully!!";
+                int ReturnCode = (int)cmd.ExecuteScalar();
+                if (ReturnCode == -1)
+                {
+                    Label1.Text = "Email Id already Exists, Please use another Email";
+                }
                 else
-                Label1.Text = "Registered Failed!!";
+                {
+                    Response.Redirect("Login.aspx");
+                }
                 con.Close();
+                //int i =cmd.ExecuteNonQuery();
+                //if(i!=0)
+                //Label1.Text = "Registered Successfully!!";
+                //else
+                //Label1.Text = "Registered Failed!!";
+                //con.Close();
             }
  
         }

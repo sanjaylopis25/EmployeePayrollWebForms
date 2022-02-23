@@ -67,6 +67,10 @@ form .text_field {
     cursor: pointer;
     outline: none;
 }
+
+.LabelError{
+    margin-left:100px;
+}
 /*
 
 
